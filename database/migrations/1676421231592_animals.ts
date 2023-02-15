@@ -7,9 +7,9 @@ export default class Animals extends BaseSchema {
     this.schema.createTable (this.tableName, (table) => {
       table.integer ('id').primary().unsigned () /* codigo_usuario llave primaria*/
       table.string('name', 100).notNullable()
-      table.string('species', 100).notNullable()
-      table.string('breed', 100).notNullable()
-      table.string('gender', 1).notNullable()
+      table.integer('species').notNullable()
+      table.integer('breed', 100).notNullable()
+      table.integer('gender', 1).notNullable()
       table.integer('age').notNullable()
       table.timestamps (false)
     })
